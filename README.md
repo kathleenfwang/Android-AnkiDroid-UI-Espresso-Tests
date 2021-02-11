@@ -122,7 +122,7 @@ Once you’ve submitted your project, you are expected to stop working on it. An
 
 
 
-### AnkiDroid information
+## AnkiDroid information
 
 <p align="center">
 <img src="docs/graphics/logos/banner_readme.png"/>
