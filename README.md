@@ -37,14 +37,14 @@ For this project, we want you to create UI tests using Espresso for AnkiDroid, a
 
 You will need to provide full test coverage for at least 8 features of the app. A feature could be "creating a new flaschard", "displaying the front and back of a flashcard", or "changing the flashcard font style".
 
-Identify the features you're most interested in testing, not what you think your interviewers or Onramp would like to see.
+We recommend that you identify the features you're most interested in testing, not what you think your interviewers or Onramp would like to see.
 
 **Scope your testing coverage to what you can reasonably accomplish by the due date. Your test coverage must meet the following requirements:**
 
-*   Use of at least four different ViewMatchers
-*   Use of at least three different ViewActions
-*   Use of at least two different ViewAssertions
-*   Test coverage for at least five different views
+*   Use of at least four different [ViewMatchers](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers)
+*   Use of at least three different [ViewActions](https://developer.android.com/reference/androidx/test/espresso/action/ViewActions)
+*   Use of at least two different [ViewAssertions](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions)
+*   Test coverage for at least five different Views
 
 **Note: you will need to detail how your tests meet these requirements in your repository's README file when you submit your project.**
 
