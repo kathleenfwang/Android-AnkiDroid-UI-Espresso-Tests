@@ -17,7 +17,7 @@ You will have seven days to complete this project. We expect those who have a mo
 ## Description and Details 🔎 
 
 #### Android App Requirements
-For this project, we want you to create UI tests using Espresso for AnkiDroid, a spaced repetition flaschard app.
+For this project, we want you to create UI tests using Espresso for [AnkiDroid](https://github.com/ankidroid/Anki-Android), a spaced repetition flaschard app.
 
 <p align="center">
 <img src="docs/graphics/logos/banner_readme.png"/>
@@ -34,6 +34,8 @@ For this project, we want you to create UI tests using Espresso for AnkiDroid, a
 <a href="https://discord.gg/qjzcRTx"><img src="https://img.shields.io/discord/368267295601983490"></img></a>
 <a href="https://github.com/ankidroid/Anki-Android/blob/master/COPYING"><img src="https://img.shields.io/github/license/ankidroid/Anki-Android" alt="license"/></a>
 </p>
+
+# [AnkiDroid](https://github.com/ankidroid/Anki-Android)
 
 You will need to provide full test coverage for at least eight features of the app. A feature could be "creating a new flashcard", "displaying the front and back of a flashcard", or "changing the flashcard font style".
 
