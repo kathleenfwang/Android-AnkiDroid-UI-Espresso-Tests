@@ -37,7 +37,7 @@ For this project, we want you to create UI tests using Espresso for [AnkiDroid](
 
 # [AnkiDroid](https://github.com/ankidroid/Anki-Android)
 
-You will need to provide full test coverage for at least eight features of the app. A feature could be "creating a new flashcard", "displaying the front and back of a flashcard", or "changing the flashcard font style".
+You will need to provide **full test coverage for at least eight features of the app.** A feature could be "creating a new flashcard", "displaying the front and back of a flashcard", or "changing the flashcard font style".
 
 We recommend that you identify the features you're most interested in testing, not what you think your interviewers or Onramp would like to see.
 
@@ -72,7 +72,7 @@ The Espresso testing framework allows you to find the UI component you want to t
 
 #### Test Coverage
 
-[Buttons](https://developer.android.com/guide/topics/ui/controls/button), [TextViews](https://developer.android.com/reference/android/widget/TextView), [EditTexts](https://developer.android.com/reference/android/widget/EditText), and [Spinners](https://developer.android.com/guide/topics/ui/controls/spinner) are just a few commonly used Views within Android apps. Since these are the UI elements that users interact with, it’s important to test a variety of them to ensure that they work properly. **For this reason, it’s mandatory that you test at least five different Views in your project.**  
+[Buttons](https://developer.android.com/guide/topics/ui/controls/button), [TextViews](https://developer.android.com/reference/android/widget/TextView), [EditTexts](https://developer.android.com/reference/android/widget/EditText), and [Spinners](https://developer.android.com/guide/topics/ui/controls/spinner) are just a few commonly used Views within Android apps. Since these are the UI elements that users interact with, it’s important to test a variety of them across different features to ensure that they work properly. **For this reason, it’s mandatory that you test at least eight app features and at least five different Views in your project.**  
 
 #### Testing Best Practices
 
