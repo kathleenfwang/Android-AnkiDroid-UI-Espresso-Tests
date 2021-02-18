@@ -102,10 +102,10 @@ Once you’ve submitted your project, you are expected to stop working on it. An
 ## Additional Resources 📚
 
 *   [Android Studio](https://developer.android.com/studio)
-*   
-*   
-*   
-*   
+*   [Espresso for noobs pt 1](https://medium.com/@dnkilic/espresso-for-noobs-part-1-bbf1f586d651)
+*   [Espresso recipes for Android](https://medium.com/@dnkilic/espresso-recipes-for-android-afb2466b8137)
+*   [Espresso Cheat sheet](https://android.github.io/android-test/downloads/espresso-cheat-sheet-2.1.0.pdf)
+*   [Fundamentals of Testing on Android](https://developer.android.com/training/testing/fundamentals)
 
 
 
