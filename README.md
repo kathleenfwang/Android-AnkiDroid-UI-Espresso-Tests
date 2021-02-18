@@ -35,11 +35,11 @@ For this project, we want you to create UI tests using Espresso for AnkiDroid, a
 <a href="https://github.com/ankidroid/Anki-Android/blob/master/COPYING"><img src="https://img.shields.io/github/license/ankidroid/Anki-Android" alt="license"/></a>
 </p>
 
-You will need to provide full test coverage for at least 8 features of the app. A feature could be "creating a new flaschard", "displaying the front and back of a flashcard", or "changing the flashcard font style".
+You will need to provide full test coverage for at least eight features of the app. A feature could be "creating a new flashcard", "displaying the front and back of a flashcard", or "changing the flashcard font style".
 
 We recommend that you identify the features you're most interested in testing, not what you think your interviewers or Onramp would like to see.
 
-**Scope your testing coverage to what you can reasonably accomplish by the due date. Your test coverage must meet the following requirements:**
+**Scope your testing coverage to what you can reasonably accomplish by the due date. Your test coverage (as a whole, not per feature) must meet the following requirements:**
 
 *   Use of at least four different [ViewMatchers](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers)
 *   Use of at least three different [ViewActions](https://developer.android.com/reference/androidx/test/espresso/action/ViewActions)
@@ -57,34 +57,21 @@ You are actively encouraged to research the web, books, videos, or tutorials for
 We will evaluate your project by assessing the overall strength and quality of the following 3 factors: 
 
 
-#### UI Testing Anatomy
+#### Test Anatomy
 
-//Correct test anatomy
+The anatomy of an Espresso test is to find a View, perform an action on that View, and validate the result. Following this structure will ensure that your tests are logical and easy-to-read. 
 
-*   Find a view
-*   Perform an action
-*   Inspect the result
+#### Testing Best Practices
 
-Using these principles will result in a high quality user experience while efficiently utilizing phone hardware resources and ensuring other developers can easily navigate through your code.
+It's important to subscribe to a set of best practices when writing tests for an Android app. Be mindful of these widely accepted principles:
 
-#### Testing Completion
-
-//Full test coverage
-
-#### Testing Success
-
-//Passing tests
+* Tests should be complete and cover any applicable corner cases
+* Tests should be maintainable and provide a solid foundation for future development
+* Test names should be clear
 
 #### Test Description
 
-As detailed above, each project submission must include a README file, which provides an overview of each test class you created. In those overviews, include the following:
-
-* Detail how you utilized testing technologies within that class
-* Detail your decisions and thought process around 'why' you thought writing this test was important
-* Detail all the corner cases you handled
-* Detail where you got stuck and how you handled it
-* Detail the different ViewMatchers, ViewActions, and ViewAssertions you used
-* Detail the different Views you tested and why you tested this view
+As detailed above, each project submission must include a README file, which provides an overview of each test class you created. This task assesses the critical competency of communicating and documenting technical concepts.
 
 #### Version Control
 
@@ -94,14 +81,16 @@ We expect you to attempt to use version control best practices in your project. 
 
 #### Submission Format
 
-This repository will be your starting point. Please download (not clone or fork) this Github repository ([onramp-android-take-home](https://github.com/onramp-io/onramp-android-take-home)) and upload changes to a newly created repository. Once the Android application has been completed, you'll be submitting a link to the new repository you created. Prior to submitting your project, you should update the README file to provide the following information:
+This repository will be your starting point. Please download (not clone or fork) this Github repository ([onramp-QE-android-project-take-home](https://github.com/onramp-io/onramp-QE-android-project-take-home)) and upload changes to a newly created repository. Once the testing has been completed, you'll be submitting a link to the new repository you created. Prior to submitting your project, you should update the README file to provide the following information about each test class you created:
 
-*   A high level architectural overview of your Android application. e.g. names, relationships and purposes of all components, including Activities, Services, Content Providers, Broadcast Receivers, etc. 
-*   A brief description of any design patterns that you leveraged.
-*   [Screenshots](https://developer.android.com/studio/debug/am-screenshot) of each Activity View and descriptions of the overall user flow.
+* How you utilized testing technologies within that class
+* Your decisions and thought process around 'why' you thought writing this test was important
+* All of the corner cases you handled
+* Where you got stuck and how you handled it
+* The different ViewMatchers, ViewActions, and ViewAssertions you used
+* The different Views you tested and why
 
-//Within the README, add a section that desccribes 'why' you tested a certain feature and how the process was etc
-Include screenshots of features, screens, buttons, etc you tested
+Feel free to provide [screenshots](https://developer.android.com/studio/debug/am-screenshot) of any Activity Views that you tested.
 
 #### Submission Deadline + Process
 
