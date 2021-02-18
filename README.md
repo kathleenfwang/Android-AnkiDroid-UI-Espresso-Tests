@@ -75,6 +75,17 @@ Using these principles will result in a high quality user experience while effic
 
 //Passing tests
 
+#### Test Description
+
+As detailed above, each project submission must include a README file, which provides an overview of each test class you created. In those overviews, include the following:
+
+* Detail how you utilized testing technologies within that class
+* Detail your decisions and thought process around 'why' you thought writing this test was important
+* Detail all the corner cases you handled
+* Detail where you got stuck and how you handled it
+* Detail the different ViewMatchers, ViewActions, and ViewAssertions you used
+* Detail the different Views you tested and why you tested this view
+
 #### Version Control
 
 We expect you to attempt to use version control best practices in your project. We will evaluate this by looking at the frequency of commits, commit messages, and diffs. We don’t expect you to be a pro with git, but we do expect you to be able to commit frequently rather than committing everything all at once.
