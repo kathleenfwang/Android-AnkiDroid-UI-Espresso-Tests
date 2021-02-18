@@ -67,12 +67,12 @@ The structure of an [Espresso](https://developer.android.com/training/testing/es
 
 The Espresso testing framework allows you to find the UI component you want to test using [ViewMatchers](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers), simulate a specific user interaction to perform on that UI component using [ViewActions](https://developer.android.com/reference/androidx/test/espresso/action/ViewActions), and verify that the UI reflects the expected behavior using [ViewAssertions](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions). To make that process easier, Espresso provides a variety of methods that you can use.
 
-**It is required that you leverage these methods by using at least four different ViewMatchers, three different ViewActions, and two different ViewAssertions.** 
+**It is required that you leverage these methods by using at least four different ViewMatchers, three different ViewActions, and two different ViewAssertions in your project.** 
  
 
 #### Test Coverage
 
-[Buttons](https://developer.android.com/guide/topics/ui/controls/button), [TextViews](https://developer.android.com/reference/android/widget/TextView), [EditTexts](https://developer.android.com/reference/android/widget/EditText), and [Spinners](https://developer.android.com/guide/topics/ui/controls/spinner) are just a few commonly used Views within Android apps. Since these are the UI elements that users interact with, it’s important to test a variety of them to ensure that they work properly within the app. **For this reason, it’s mandatory that you test at least five different Views in your project.**  
+[Buttons](https://developer.android.com/guide/topics/ui/controls/button), [TextViews](https://developer.android.com/reference/android/widget/TextView), [EditTexts](https://developer.android.com/reference/android/widget/EditText), and [Spinners](https://developer.android.com/guide/topics/ui/controls/spinner) are just a few commonly used Views within Android apps. Since these are the UI elements that users interact with, it’s important to test a variety of them to ensure that they work properly. **For this reason, it’s mandatory that you test at least five different Views in your project.**  
 
 #### Testing Best Practices
 
