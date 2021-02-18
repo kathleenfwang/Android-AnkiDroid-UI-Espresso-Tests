@@ -41,12 +41,12 @@ You will need to provide full test coverage for at least eight features of the a
 
 We recommend that you identify the features you're most interested in testing, not what you think your interviewers or Onramp would like to see.
 
-**Scope your testing coverage to what you can reasonably accomplish by the due date. Your test coverage (as a whole, not per feature) must meet the following requirements:**
+**Scope your testing to what you can reasonably accomplish by the due date. Your test coverage (as a whole, not per feature) must meet the following requirements:**
 
 *   Use of at least four different [ViewMatchers](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers)
 *   Use of at least three different [ViewActions](https://developer.android.com/reference/androidx/test/espresso/action/ViewActions)
 *   Use of at least two different [ViewAssertions](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions)
-*   Test coverage for at least five different Views
+*   Test coverage for at least five different [Views](https://developer.android.com/reference/android/view/View)
 
 **Note: you will need to detail how your tests meet these requirements in your repository's README file when you submit your project.**
 
@@ -56,12 +56,23 @@ You are actively encouraged to research the web, books, videos, or tutorials for
 
 ## What we're looking for 🌟
 
-We will evaluate your project by assessing the overall strength and quality of the following 3 factors: 
+We will evaluate your project by assessing the overall strength and quality of the following 6 factors: 
 
 
-#### Test Anatomy
+#### Test Structure
 
-The anatomy of an Espresso test is to find a View, perform an action on that View, and validate the result. Following this structure will ensure that your tests are logical and easy-to-read. 
+The structure of an [Espresso](https://developer.android.com/training/testing/espresso) test involves finding a View, performing an action on that View, and validating the result. Following this structure will ensure that your tests are logical and easy-to-read. 
+
+#### Test Variety
+
+The Espresso testing framework allows you to find the UI component you want to test using [ViewMatchers](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers), simulate a specific user interaction to perform on that UI component using [ViewActions](https://developer.android.com/reference/androidx/test/espresso/action/ViewActions), and verify that the UI reflects the expected behavior using [ViewAssertions](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions). To make that process easier, Espresso provides a variety of methods that you can use.
+
+**It is required that you leverage these methods by using at least four different ViewMatchers, three different ViewActions, and two different ViewAssertions.** 
+ 
+
+#### Test Coverage
+
+[Buttons](https://developer.android.com/guide/topics/ui/controls/button), [TextViews](https://developer.android.com/reference/android/widget/TextView), [EditTexts](https://developer.android.com/reference/android/widget/EditText), and [Spinners](https://developer.android.com/guide/topics/ui/controls/spinner) are just a few commonly used Views within Android apps. Since these are the UI elements that users interact with, it’s important to test a variety of them to ensure that they work properly within the app. **For this reason, it’s mandatory that you test at least five different Views in your project.**  
 
 #### Testing Best Practices
 
@@ -70,6 +81,7 @@ It's important to subscribe to a set of best practices when writing tests for an
 * Tests should be complete and cover any applicable corner cases
 * Tests should be maintainable and provide a solid foundation for future development
 * Test names should be clear
+* Tests should be [organized in directories based on execution environment](https://developer.android.com/training/testing/fundamentals)
 
 #### Test Description
 
