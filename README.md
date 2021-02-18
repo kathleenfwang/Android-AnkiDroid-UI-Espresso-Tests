@@ -127,7 +127,7 @@ Once you’ve submitted your project, you are expected to stop working on it. An
 <a href="https://github.com/ankidroid/Anki-Android/blob/master/COPYING"><img src="https://img.shields.io/github/license/ankidroid/Anki-Android" alt="license"/></a>
 </p>
 
-# AnkiDroid
+# [AnkiDroid](https://github.com/ankidroid/Anki-Android)
 A semi-official port of the open source [Anki](http://ankisrs.net/index.html) spaced repetition flashcard system to Android. Memorize anything with AnkiDroid!
 
 
