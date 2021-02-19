@@ -6,11 +6,11 @@ Congratulations for making it this far in the interview process for the SiriusXM
 
 You will have seven days to complete this project. We expect those who have a moderate level of Android development experience to spend between 30 and 40 hours to implement, document, and submit the project to us. Depending on your level, it may take more or less time, so please plan accordingly.
 
-**The project is due on [DUE DATE] at 9:00am PT/ 12:00pm ET**
+**The project is due on Friday, March 5 at 9:00am PT/ 12:00pm ET**
 
 #### Project Summary:
 *   Total time available to complete: 7 days
-*   Due date/time: [DUE DATE]
+*   Due date/time: Friday, March 5 at 9:00am PT/ 12:00pm ET
 *   Expected development time to complete: 30 - 40 hours 
 *   Required stack/tools: a computer with Android Studio
 
@@ -104,11 +104,11 @@ This repository will be your starting point. Please download (not clone or fork)
 * The different ViewMatchers, ViewActions, and ViewAssertions you used
 * The different Views you tested and why
 
-Feel free to provide [screenshots](https://developer.android.com/studio/debug/am-screenshot) of any Activity Views that you tested.
+Feel free to provide [screenshots](https://developer.android.com/studio/debug/am-screenshot) of any Activity Views that you test.
 
 #### Submission Deadline + Process
 
-You must submit your project by **9:00am PT/12:00pm ET, on January 13, 2020 using [this form](https://docs.google.com/forms/d/e/1FAIpQLSdFBo328et9VHd04fFTZ7MRfIUD5le-jimyl0UccCs3IBYHoQ/viewform).** Be sure that your project is viewable by the Onramp team in a **public** repository (you can make it private after January 28, 2021).
+You must submit your project by **9:00am PT/12:00pm ET, on March 5, 2021 using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeyphOplL7AJdED7pT-vt5yeQfqpTbyrzXHIrLHViWaZ9yd4Q/viewform).** Be sure that your project is viewable by the Onramp team in a **public** repository (you can make it private after March 19, 2021).
 
 Once you’ve submitted your project, you are expected to stop working on it. Any commits that occur after submission or the deadline will not be reviewed. 
 
