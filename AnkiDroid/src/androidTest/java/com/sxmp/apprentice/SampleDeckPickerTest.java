@@ -22,7 +22,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.not;
 
 public class SampleDeckPickerTest {
-
+    private boolean cardsInDeck = true;
     private ActivityTestRule<DeckPicker> activityRule =
             new ActivityTestRule<>(DeckPicker.class, false, false);
 
@@ -38,14 +38,22 @@ public class SampleDeckPickerTest {
     }
 
     @Test
-    public void test_isDeckPickerInView() {
-        onView(withId(R.id.deckpicker_view)).check(matches(isDisplayed()));
+    public void test_isDeckItemInView() {
+        if (cardsInDeck){
+            onView(withId(R.id.DeckPickerHoriz)).check(matches(isDisplayed()));
+        }
+        else {
+            onView(withId(R.id.DeckPickerHoriz)).check(matches(not(isDisplayed())));
+        }
     }
 
     @Test
     public void test_isTextCorrect() {
-        onView(withText(R.string.no_cards_placeholder_title)).check(matches(not(isDisplayed())));
-
+        if (cardsInDeck) {
+            onView(withText(R.string.no_cards_placeholder_title)).check(matches(not(isDisplayed())));
+        }
+        else {
+            onView(withText(R.string.no_cards_placeholder_title)).check(matches(isDisplayed()));
+        }
     }
-
 }
