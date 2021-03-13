@@ -16,6 +16,7 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
@@ -48,12 +49,17 @@ public class SampleDeckPickerTest {
     }
 
     @Test
-    public void test_isTextCorrect() {
+    public void test_isTextCorrectWhenCardsInDeck() {
         if (cardsInDeck) {
             onView(withText(R.string.no_cards_placeholder_title)).check(matches(not(isDisplayed())));
-        }
-        else {
+        } else {
             onView(withText(R.string.no_cards_placeholder_title)).check(matches(isDisplayed()));
         }
     }
+    @Test
+    public void test_isCardClickable() {
+       onView(withId(R.id.DeckPickerHoriz)).check(matches(isClickable()));
+    }
+
+
 }
