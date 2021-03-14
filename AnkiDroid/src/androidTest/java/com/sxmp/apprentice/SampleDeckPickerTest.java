@@ -59,13 +59,15 @@ public class SampleDeckPickerTest {
     }
     @Test
     public void test_isCardClickable() {
-       onView(withId(R.id.DeckPickerHoriz)).check(matches(isClickable()));
+       onView(withId(R.id.DeckPickerHoriz)).perform(click());
+        onView(withText("SHOW ANSWER")).check(matches(isDisplayed()));
     }
 
     @Test
     public void test_isAddButtonVisibleAndClickable() {
         onView(withId(R.id.add_content_menu)).check(matches(isDisplayed()));
         onView(withId(R.id.add_content_menu)).perform(click());
+//        onView(withId(R.id.action_add)).check(matches(isDisplayed()));
     }
 
 }
