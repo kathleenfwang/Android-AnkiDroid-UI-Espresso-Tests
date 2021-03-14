@@ -15,6 +15,7 @@ import androidx.test.rule.GrantPermissionRule;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -61,5 +62,10 @@ public class SampleDeckPickerTest {
        onView(withId(R.id.DeckPickerHoriz)).check(matches(isClickable()));
     }
 
+    @Test
+    public void test_isAddButtonVisibleAndClickable() {
+        onView(withId(R.id.add_content_menu)).check(matches(isDisplayed()));
+        onView(withId(R.id.add_content_menu)).perform(click());
+    }
 
 }

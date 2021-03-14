@@ -27,7 +27,6 @@ import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.*;
 
 public class MyAccountTest {
-    //login_button
     private ActivityTestRule<MyAccount> activityRule =
             new ActivityTestRule<>(MyAccount.class, false, false);
 
