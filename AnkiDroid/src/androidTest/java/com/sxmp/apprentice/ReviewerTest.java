@@ -48,5 +48,17 @@ public class ReviewerTest {
                 // flip card button should not be displayed after clicked
                 .check(matches(not((isDisplayed()))));
     }
-
+    @Test
+    public void test_isFlagButtonDisplayingFlags() {
+        // array of flags with flag names
+        String flags[] = {"Red flag","Blue flag", "Green flag", "Orange flag", "No flag"};
+        // find action flag icon and click
+        onView(withId(R.id.action_flag)).check(matches(isDisplayed()))
+                // after clicking flag icon, list of flag names should display
+                .perform(click());
+        // loop through flag names to check if they are visible
+        for (int i =0;i<flags.length;i++) {
+            onView(withText(flags[i])).check(matches(isDisplayed()));
+        }
+    }
 }
