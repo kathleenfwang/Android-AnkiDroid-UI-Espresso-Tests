@@ -24,7 +24,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
 
-public class SampleDeckPickerTest {
+public class DeckPickerTest {
     // TODO: find a way to get cardsInDeck value dynamically
     private boolean cardsInDeck = true;
     private ActivityTestRule<DeckPicker> activityRule =
