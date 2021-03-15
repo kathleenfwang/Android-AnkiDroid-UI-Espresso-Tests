@@ -15,11 +15,13 @@ import androidx.test.rule.GrantPermissionRule;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.*;
 
 public class ReviewerTest {
@@ -38,10 +40,13 @@ public class ReviewerTest {
     }
 
     @Test
-    public void test_isShowAnswerButtonDisplayedAndClickable() {
+    public void test_isShowAnswerButtonNotDisplayedAfterClicked() {
         // checking if the flip card button is displayed
-        onView(withId(R.id.flip_card)).check(matches(isDisplayed()));
-        // checking if the flip card button is clickable
-        onView(withId(R.id.flip_card)).check(matches(isClickable()));
+        onView(withId(R.id.flip_card)).check(matches(isDisplayed()))
+                // click flip card button
+                .perform(click())
+                // flip card button should not be displayed after clicked
+                .check(matches(not((isDisplayed()))));
     }
+
 }
