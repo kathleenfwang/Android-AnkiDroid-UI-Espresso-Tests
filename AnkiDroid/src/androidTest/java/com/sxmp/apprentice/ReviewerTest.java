@@ -40,7 +40,7 @@ public class ReviewerTest {
     }
 
     @Test
-    public void test_isShowAnswerButtonNotDisplayedAfterClicked() {
+    public void test_isFlipCardButtonNotDisplayedAfterClick() {
         // checking if the flip card button is displayed
         onView(withId(R.id.flip_card)).check(matches(isDisplayed()))
                 // click flip card button
