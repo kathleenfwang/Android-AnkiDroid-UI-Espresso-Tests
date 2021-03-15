@@ -27,7 +27,7 @@ public class ReviewerTest {
 
     private GrantPermissionRule grantRule =
             GrantPermissionRule.grant(WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE);
-
+    //
     @Rule
     public RuleChain ruleChain = RuleChain.outerRule(grantRule).around(activityRule);
 
