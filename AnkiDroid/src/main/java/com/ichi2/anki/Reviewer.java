@@ -34,6 +34,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.util.Pair;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -99,6 +100,7 @@ import static com.ichi2.anim.ActivityTransitionAnimation.Direction.*;
 
 
 public class Reviewer extends AbstractFlashcardViewer {
+
     private boolean mHasDrawerSwipeConflicts = false;
     private boolean mShowWhiteboard = true;
     private boolean mPrefFullscreenReview = false;
@@ -157,6 +159,7 @@ public class Reviewer extends AbstractFlashcardViewer {
             int cardCount = result.other.length;
             UIUtils.showThemedToast(Reviewer.this,
                     getResources().getQuantityString(getToastResourceId(), cardCount, cardCount), true);
+
         }
     }
 
