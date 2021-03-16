@@ -1,7 +1,12 @@
 package com.sxmp.apprentice;
 
+import android.util.Log;
+
+import com.ichi2.anki.AnkiActivity;
 import com.ichi2.anki.DeckPicker;
 import com.ichi2.anki.R;
+import com.ichi2.anki.widgets.DeckAdapter;
+import com.ichi2.libanki.Collection;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -29,8 +34,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
 public class DeckPickerTest {
-    // TODO: find a way to get cardsInDeck value dynamically
-    private boolean cardsInDeck = true;
+
     private ActivityTestRule<DeckPicker> activityRule =
             new ActivityTestRule<>(DeckPicker.class, false, false);
 
@@ -45,8 +49,14 @@ public class DeckPickerTest {
         activityRule.launchActivity(null);
     }
 
+
+
     @Test
     public void test_isDeckItemInView() {
+        //get current deck size
+        int cards = activityRule.getActivity().getDeckCount();
+        boolean cardsInDeck = cards > 0;
+
         if (cardsInDeck){
             onView(withId(R.id.DeckPickerHoriz)).check(matches(isDisplayed()));
         }
@@ -57,6 +67,10 @@ public class DeckPickerTest {
 
     @Test
     public void test_isTextCorrectWhenCardsInDeck() {
+        //get current deck size
+        int cards = activityRule.getActivity().getDeckCount();
+        boolean cardsInDeck = cards > 0;
+
         if (cardsInDeck) {
             onView(withText(R.string.no_cards_placeholder_title)).check(matches(not(isDisplayed())));
         } else {
@@ -81,7 +95,11 @@ public class DeckPickerTest {
         onView(withText("Add"))
                 .check(matches(isDisplayed()));
         // check if the button to "Add" is also visible
-        onView(withId(R.id.add_note_action)).check(matches(isClickable()));
+        onView(withId(R.id.add_note_action)).check(matches(isClickable()))
+                .perform(click());
+//        // should redirect to "Add note" page - might have to check if new intent is visible: https://stackoverflow.com/questions/25998659/espresso-how-can-i-check-if-an-activity-is-launched-after-performing-a-certain
+//        onView(withId(R.id.CardEditorModelText))
+//                .check(matches(isDisplayed()));
     }
 
 }
