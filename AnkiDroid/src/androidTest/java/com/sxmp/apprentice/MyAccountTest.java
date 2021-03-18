@@ -40,7 +40,7 @@ public class MyAccountTest {
     public void setup() {
         activityRule.launchActivity(null);
     }
-    
+
     @Test
     public void test_loginButtonDoesNotRedirectWhenNoUser() {
         // first clear the password and username forms
@@ -50,7 +50,9 @@ public class MyAccountTest {
         onView(withId(R.id.login_button)).perform(click());
         // username logged in form should not exist
         onView(withId(R.id.username_logged_in)).check(doesNotExist());
-        // Log In button should still be displayed
+        // Invalid email address or password text should display
+        onView(withText("Invalid email address or password")).check(matches(isDisplayed()));
+        // Login button should still be displayed
         onView(withId(R.id.login_button)).check(matches(isDisplayed()));
     }
 }

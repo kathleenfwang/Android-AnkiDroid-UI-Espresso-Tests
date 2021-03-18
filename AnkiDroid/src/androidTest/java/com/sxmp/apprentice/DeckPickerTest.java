@@ -73,5 +73,4 @@ public class DeckPickerTest {
         // check if the button to "Add" is also visible
         onView(withId(R.id.add_note_action)).check(matches(isClickable()));
     }
-
 }
