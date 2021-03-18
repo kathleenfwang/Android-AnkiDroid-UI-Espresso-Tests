@@ -17,6 +17,7 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.hasFocus;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.not;
@@ -38,8 +39,19 @@ public class CardBrowserTest {
     }
 
     @Test
-    public void test_isSearchBoxEditable() {
-        onView(withId(R.id.action_search)).check(matches(isDisplayed())).perform(click());
+    public void test_isSearchBoxFocused() {
+        // check search button is displayed
+        onView(withId(R.id.action_search)).check(matches(isDisplayed()))
+                // click search button
+                .perform(click());
+        // check if search text is now focused
+    onView(withId(R.id.search_src_text)).check(matches(hasFocus()));
+    }
+    @Test
+    public void test_isFirstCardHighlighted() {
+        // check if first item is displayed
+        
+        // check if it has background
     }
 
 }
