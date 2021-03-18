@@ -44,7 +44,7 @@ This test case is for the `Reviewer` activity. The following tests are included:
   - `isFlagButtonDisplayingFlags()`
     - The flag button should display options for following flags: "Red flag", "Orange flag", "Green flag", etc <br />
     
-I wanted to make a loop to make sure all of the correct flag names were displayed correctly. <br />
+I wanted to make a loop to make sure all of the correct flag names were displayed correctly. It was interesting creating a Java array to store the flag names and then utilizing a loop through the flag array and check if each flag name was displayed correctly. <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573865-9456d800-8768-11eb-8873-8c09614bfa4e.png)
 
 ### Card Browser Test: 
