@@ -30,6 +30,7 @@ This test case is for the `DeckPicker` activity. The following tests are include
   - `isTextCorrectWhenCardsInDeck()`
     - If there is cards in deck, should not display "Collection is empty"
   - `isCardClickableAndShowAnswerButtonDisplays()`
+    - uses `isClickable()`
     - Each item in the deck should be clickable and after it's clicked, the "Show Answer" button should display 
   - `isAddButtonClickableAfterMenuClick()`
     - Test if the "+" button is clickable and a menu with "add" option is displayed <br />
@@ -53,6 +54,7 @@ This test case is for the `CardBrowser` activity. The following tests are includ
     - After user clicks the search button, the search edit text field should be focused 
     - uses `hasFocus()`, `typeTextIntoFocusedView()`, `hasFocus()`
   - `isSpinnerDisplayingQuestion()`
+    - uses `withSpinnerText()`
     - check if the spinner is displaying the "Question" tab and the spinner text is set to "Question" after it's clicked <br /> 
     
 I wanted to check if the spinner was displaying the text correctly and I wanted to make sure the "search" input field was focused after the search button was clicked. It was challenging using the spinner tests and having to use onData instead of onView. It was also challnging finding the card name to make a search test.<br /> 
