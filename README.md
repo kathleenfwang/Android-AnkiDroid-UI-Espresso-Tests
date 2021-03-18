@@ -37,7 +37,7 @@ This test case is for the `DeckPicker` activity. The following tests are include
 ### My Account Test:
 This test case is for the `MyAccount` activity. The following tests are included: 
   - `loginButtonDoesNotRedirectWhenNoUser()`
-    - Clears the username and password text fields, and after pressing the "Log in" button, the page should remain on the Login Page, so the "Log in" button should still display <br />
+    - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573555-fe22b200-8767-11eb-9db6-df3788b7382f.png)
  
 ### Preferences Test:
