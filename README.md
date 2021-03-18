@@ -8,7 +8,7 @@ Tests for the Onramp Android QE available [here](https://github.com/onramp-io/on
   - `withSpinnerText()`- CardBrowser
 ## Use of at least three different ViewActions
   - `clearText()` - MyAccount 
-  - `click()` - all 
+  - `click()` - MyAccount
   - `typeTextIntoFocusedView()` - CardBrowser
   - `pressKey()`- CardBrowser
 ## Use of at least two different ViewAssertions
@@ -19,7 +19,7 @@ Tests for the Onramp Android QE available [here](https://github.com/onramp-io/on
 ### My Account Test:
 This test case is for the `MyAccount` activity. The following tests are included: 
   - `loginButtonDoesNotRedirectWhenNoUser()`
-    - uses `clearText()`, `doesNotExist()`, `matches`, `isDisplayed()`
+    - uses `clearText()`, `doesNotExist()`, `matches()`, `isDisplayed()`, `click()`
     - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br /> 
     
 I wanted to make sure the log in flow would not advance if the username and password fields were blank, and should display an error message. <br />
