@@ -23,6 +23,7 @@ This test case is for the `CardBrowser` activity. The following tests are includ
     - uses `hasFocus()`, `typeTextIntoFocusedView()`, `hasFocus()`
   - `isSpinnerDisplayingQuestion()`
     - check if the spinner is displaying the "Question" tab and the spinner text is set to "Question" after it's clicked <br /> 
+    
 I wanted to check if the spinner was displaying the text correctly and I wanted to make sure the "search" input field was focused after the search button was clicked. <br /> 
 ![image](https://user-images.githubusercontent.com/33078129/111573661-2e6a5080-8768-11eb-9719-09b20166c3e9.png)
 
