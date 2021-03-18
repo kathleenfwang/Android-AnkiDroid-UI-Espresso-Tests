@@ -22,7 +22,7 @@ This test case is for the `MyAccount` activity. The following tests are included
     - uses `clearText()`, `doesNotExist()`, `matches()`, `isDisplayed()`, `click()`
     - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br /> 
     
-I wanted to make sure the log in flow would not advance if the username and password fields were blank, and should display an error message. It was challenging at first to determine which <br />
+I wanted to make sure the log in flow would not advance if the username and password fields were blank, and should display an error message. Because the app did not request login upon starting, I found the login page through the layout resource files. It was challenging at first to determine what should be displayed if login failed, until I noticed the "Invalid email address or password" displayed through the test run. <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573555-fe22b200-8767-11eb-9db6-df3788b7382f.png)
 
 ### Deck Picker Test: 
