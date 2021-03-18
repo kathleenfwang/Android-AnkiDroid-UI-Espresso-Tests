@@ -1,5 +1,8 @@
 package com.sxmp.apprentice;
 
+import android.util.Log;
+import android.view.KeyEvent;
+
 import com.ichi2.anki.CardBrowser;
 import com.ichi2.anki.DeckPicker;
 import com.ichi2.anki.R;
@@ -17,6 +20,8 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.pressKey;
+import static androidx.test.espresso.action.ViewActions.typeTextIntoFocusedView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.hasFocus;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -46,13 +51,14 @@ public class CardBrowserTest {
     }
 
     @Test
-    public void test_isSearchBoxFocused() {
+    public void test_isSearchBox() {
         // check search button is displayed
         onView(withId(R.id.action_search)).check(matches(isDisplayed()))
                 // click search button
                 .perform(click());
         // check if search text is now focused
-    onView(withId(R.id.search_src_text)).check(matches(hasFocus()));
+    onView(withId(R.id.search_src_text)).check(matches(hasFocus())).perform(typeTextIntoFocusedView("Test2")).perform(pressKey(KeyEvent.KEYCODE_ENTER));
+    onView(withId(R.id.snackbar_text)).check(matches(isDisplayed()));
     }
     @Test
     public void test_isSpinnerDisplayingQuestion() {

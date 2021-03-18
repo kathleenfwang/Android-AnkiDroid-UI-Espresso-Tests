@@ -40,11 +40,7 @@ public class MyAccountTest {
     public void setup() {
         activityRule.launchActivity(null);
     }
-
-    @Test
-    public void test_isLoginButtonDisplayed() {
-        onView(withId(R.id.login_button)).check(matches(isDisplayed()));
-    }
+    
     @Test
     public void test_loginButtonDoesNotRedirectWhenNoUser() {
         // first clear the password and username forms
@@ -52,9 +48,9 @@ public class MyAccountTest {
         onView(withId(R.id.username)).perform(clearText());
         // click login button
         onView(withId(R.id.login_button)).perform(click());
-        // can also check if the root layout(Login Activity) is still being displayed
-//        onView(withId(R.id.root_layout)).check(matches(isDisplayed()));
-        // "Log in" button should still be visible 
-        onView(withText(R.string.log_in)).check(matches(isDisplayed()));
+        // username logged in form should not exist
+        onView(withId(R.id.username_logged_in)).check(doesNotExist());
+        // Log In button should still be displayed
+        onView(withId(R.id.login_button)).check(matches(isDisplayed()));
     }
 }

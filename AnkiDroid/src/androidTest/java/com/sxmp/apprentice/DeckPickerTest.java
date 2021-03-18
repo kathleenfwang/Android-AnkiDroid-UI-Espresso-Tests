@@ -42,20 +42,6 @@ public class DeckPickerTest {
     }
 
     @Test
-    public void test_isDeckItemInView() {
-        //get current deck size
-        int cards = activityRule.getActivity().getDeckCount();
-        boolean cardsInDeck = cards > 0;
-
-        if (cardsInDeck){
-            onView(withId(R.id.DeckPickerHoriz)).check(matches(isDisplayed()));
-        }
-        else {
-            onView(withId(R.id.DeckPickerHoriz)).check(matches(not(isDisplayed())));
-        }
-    }
-
-    @Test
     public void test_isTextCorrectWhenCardsInDeck() {
         //get current deck size
         int cards = activityRule.getActivity().getDeckCount();
