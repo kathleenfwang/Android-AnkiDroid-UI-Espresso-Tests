@@ -4,20 +4,20 @@ Tests for the Onramp Android QE available [here](https://github.com/onramp-io/on
 ## Use of at least four different ViewMatchers
   - `isDisplayed()` - all 
   - `isClickable()` - DeckPicker
-  - `hasFocus()` - CardBrowswer
-  - `withSpinnerText()`- CardBrowswer
+  - `hasFocus()` - CardBrowser
+  - `withSpinnerText()`- CardBrowser
 ## Use of at least three different ViewActions
   - `clearText()` - MyAccount 
   - `click()` - all 
-  - `typeTextIntoFocusedView()` - CardBrowswer
-  - `pressKey()`- CardBrowswer
+  - `typeTextIntoFocusedView()` - CardBrowser
+  - `pressKey()`- CardBrowser
 ## Use of at least two different ViewAssertions
   - `matches()` - all 
   - `doesNotExist()` - MyAccount
 ## Test coverage for at least five different Views: 
 
 ### Card Browser Test: 
-This test case is for the `CardBrowswer` activity. The following tests are included: 
+This test case is for the `CardBrowser` activity. The following tests are included: 
   - `isSearchBoxFocused()`
     - After user clicks the search button, the search edit text field should be focused 
     - uses `hasFocus()`, `typeTextIntoFocusedView()`, `hasFocus()`
