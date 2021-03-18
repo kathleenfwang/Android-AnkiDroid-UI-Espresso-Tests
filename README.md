@@ -19,7 +19,7 @@ Tests for the Onramp Android QE available [here](https://github.com/onramp-io/on
 ### My Account Test:
 This test case is for the `MyAccount` activity. The following tests are included: 
   - `loginButtonDoesNotRedirectWhenNoUser()`
-    - uses `clearText()`, `doesNotExist()`
+    - uses `clearText()`, `doesNotExist()`, `matches`, `isDisplayed()`
     - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br /> 
     
 I wanted to make sure the log in flow would not advance if the username and password fields were blank, and should display an error message. <br />
@@ -30,7 +30,7 @@ This test case is for the `DeckPicker` activity. The following tests are include
   - `isTextCorrectWhenCardsInDeck()`
     - If there is cards in deck, should not display "Collection is empty"
   - `isCardClickableAndShowAnswerButtonDisplays()`
-    - uses `isClickable()`
+    - uses `isClickable()`, `click()`
     - Each item in the deck should be clickable and after it's clicked, the "Show Answer" button should display 
   - `isAddButtonClickableAfterMenuClick()`
     - Test if the "+" button is clickable and a menu with "add" option is displayed <br />
