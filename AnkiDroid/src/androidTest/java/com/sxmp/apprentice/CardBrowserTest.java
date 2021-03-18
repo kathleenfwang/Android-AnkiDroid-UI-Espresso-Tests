@@ -66,8 +66,6 @@ public class CardBrowserTest {
                 is("Question")))
                 // click the "Question" tab
                 .perform(click());
-        // check if the text box now displays "Question"
-        onView(withText("Question")).check(matches(isDisplayed()));
         // check the spinner text now displaying "Question"
         onView(withId(R.id.browser_column1_spinner)).check(matches(withSpinnerText(containsString("Question"))));
     }

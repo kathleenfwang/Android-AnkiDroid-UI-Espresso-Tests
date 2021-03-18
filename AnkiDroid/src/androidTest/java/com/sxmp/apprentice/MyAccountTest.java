@@ -54,7 +54,7 @@ public class MyAccountTest {
         onView(withId(R.id.login_button)).perform(click());
         // can also check if the root layout(Login Activity) is still being displayed
 //        onView(withId(R.id.root_layout)).check(matches(isDisplayed()));
-        // username logged in form should not exist
-        onView(withId(R.id.username_logged_in)).check(doesNotExist());
+        // "Log in" button should still be visible 
+        onView(withText(R.string.log_in)).check(matches(isDisplayed()));
     }
 }

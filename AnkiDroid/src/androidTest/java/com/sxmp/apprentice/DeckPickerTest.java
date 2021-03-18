@@ -78,18 +78,14 @@ public class DeckPickerTest {
     }
 
     @Test
-    public void test_isAddButtonVisibleAfterMenuClick() {
+    public void test_isAddButtonClickableAfterMenuClick() {
         // click "add content menu" button
         onView(withId(R.id.add_content_menu)).check(matches(isDisplayed())).perform(click());
         // check if there is an option "Add" that pops out
         onView(withText("Add"))
                 .check(matches(isDisplayed()));
         // check if the button to "Add" is also visible
-        onView(withId(R.id.add_note_action)).check(matches(isClickable()))
-                .perform(click());
-//        // should redirect to "Add note" page - might have to check if new intent is visible: https://stackoverflow.com/questions/25998659/espresso-how-can-i-check-if-an-activity-is-launched-after-performing-a-certain
-//        onView(withId(R.id.CardEditorModelText))
-//                .check(matches(isDisplayed()));
+        onView(withId(R.id.add_note_action)).check(matches(isClickable()));
     }
 
 }

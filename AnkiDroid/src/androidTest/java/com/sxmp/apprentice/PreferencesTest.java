@@ -58,6 +58,4 @@ public class PreferencesTest {
         // Font option with "OpenSans-Bold" should display
         onView(withText("OpenSans-Bold")).check(matches(isDisplayed()));
     }
-
-
 }
