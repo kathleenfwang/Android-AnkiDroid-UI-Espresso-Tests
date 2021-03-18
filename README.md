@@ -2,24 +2,25 @@
 # Test Descriptions: 
 Tests for the Onramp Android QE available [here](https://github.com/onramp-io/onramp-QE-android-project-take-home?utm_campaign=Sirius%20XM%20Pandora%20Cohort%204&utm_medium=email&_hsmi=115377358&_hsenc=p2ANqtz-89NdiCpQi4zbmlPfQ9l8CiR3G4cRzSB2SuC68cleBGViiMw3Buu11_JTqUxzVhLE3GVh1x6jCmkzz2Ets3kPZhPE8WCtbK6uOfZbXgGyaTuUpgysQ&utm_content=115377358&utm_source=hs_email)
 ## Use of at least four different ViewMatchers
-  - `isDisplayed()`
-  - `isClickable()`
-  - `hasFocus()`
-  - `withSpinnerText()`
+  - `isDisplayed()` - all 
+  - `isClickable()` - DeckPicker
+  - `hasFocus()` - CardBrowswer
+  - `withSpinnerText()`- CardBrowswer
 ## Use of at least three different ViewActions
-  - `clearText()`
-  - `click()`
-  - `typeTextIntoFocusedView()`
-  - `pressKey()`
+  - `clearText()` - MyAccount 
+  - `click()` - all 
+  - `typeTextIntoFocusedView()` - CardBrowswer
+  - `pressKey()`- CardBrowswer
 ## Use of at least two different ViewAssertions
-  - `matches()`
-  - `doesNotExist()`
+  - `matches()` - all 
+  - `doesNotExist()` - MyAccount
 ## Test coverage for at least five different Views: 
 
 ### Card Browser Test: 
 This test case is for the `CardBrowswer` activity. The following tests are included: 
   - `isSearchBoxFocused()`
     - After user clicks the search button, the search edit text field should be focused 
+    - uses `hasFocus()`, `typeTextIntoFocusedView()`, `hasFocus()`
   - `isSpinnerDisplayingQuestion()`
     - check if the spinner is displaying the "Question" tab and the spinner text is set to "Question" after it's clicked
 ![image](https://user-images.githubusercontent.com/33078129/111573661-2e6a5080-8768-11eb-9719-09b20166c3e9.png)
@@ -37,6 +38,7 @@ This test case is for the `DeckPicker` activity. The following tests are include
 ### My Account Test:
 This test case is for the `MyAccount` activity. The following tests are included: 
   - `loginButtonDoesNotRedirectWhenNoUser()`
+    - uses `clearText()`, `doesNotExist()`
     - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573555-fe22b200-8767-11eb-9db6-df3788b7382f.png)
  
