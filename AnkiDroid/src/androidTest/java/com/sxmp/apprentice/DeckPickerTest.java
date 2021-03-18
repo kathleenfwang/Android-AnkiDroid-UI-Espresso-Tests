@@ -8,7 +8,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
 
-import androidx.test.core.app.ActivityScenario;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.rule.GrantPermissionRule;
 
@@ -21,10 +20,13 @@ import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
-public class SampleDeckPickerTest {
-    private boolean cardsInDeck = true;
+public class DeckPickerTest {
+
     private ActivityTestRule<DeckPicker> activityRule =
             new ActivityTestRule<>(DeckPicker.class, false, false);
 
@@ -40,17 +42,11 @@ public class SampleDeckPickerTest {
     }
 
     @Test
-    public void test_isDeckItemInView() {
-        if (cardsInDeck){
-            onView(withId(R.id.DeckPickerHoriz)).check(matches(isDisplayed()));
-        }
-        else {
-            onView(withId(R.id.DeckPickerHoriz)).check(matches(not(isDisplayed())));
-        }
-    }
-
-    @Test
     public void test_isTextCorrectWhenCardsInDeck() {
+        //get current deck size
+        int cards = activityRule.getActivity().getDeckCount();
+        boolean cardsInDeck = cards > 0;
+
         if (cardsInDeck) {
             onView(withText(R.string.no_cards_placeholder_title)).check(matches(not(isDisplayed())));
         } else {
@@ -58,16 +54,24 @@ public class SampleDeckPickerTest {
         }
     }
     @Test
-    public void test_isCardClickable() {
+    public void test_isCardClickableAndShowAnswerButtonDisplays() {
+        //select the deck card and perform click
        onView(withId(R.id.DeckPickerHoriz)).perform(click());
-        onView(withText("SHOW ANSWER")).check(matches(isDisplayed()));
+       // show answer button should then be displayed
+        onView(withId(R.id.flip_card))
+                .check(matches(withText(containsString("SHOW ANSWER"))));
+
     }
 
     @Test
-    public void test_isAddButtonVisibleAndClickable() {
-        onView(withId(R.id.add_content_menu)).check(matches(isDisplayed()));
-        onView(withId(R.id.add_content_menu)).perform(click());
-//        onView(withId(R.id.action_add)).check(matches(isDisplayed()));
+    public void test_isAddButtonClickableAfterMenuClick() {
+        // click "add content menu" button
+        onView(withId(R.id.add_content_menu)).check(matches(isDisplayed())).perform(click());
+        // check if there is an option "Add" that pops out
+        onView(withText("Add"))
+                .check(matches(isDisplayed()));
+        // check if the button to "Add" is also visible
+        onView(withId(R.id.add_note_action)).check(matches(isClickable()));
     }
 
 }

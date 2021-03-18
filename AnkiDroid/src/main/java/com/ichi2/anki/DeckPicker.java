@@ -64,6 +64,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
 import android.util.TypedValue;
 import android.view.KeyEvent;
@@ -171,6 +172,7 @@ public class DeckPicker extends NavigationDrawerActivity implements
 
     protected static final String UPGRADE_VERSION_KEY = "lastUpgradeVersion";
 
+    public static int[] cards;
     /**
      * Available options performed by other activities (request codes for onActivityResult())
      */
@@ -549,7 +551,10 @@ public class DeckPicker extends NavigationDrawerActivity implements
         mShortAnimDuration = getResources().getInteger(android.R.integer.config_shortAnimTime);
     }
 
-
+    public int getDeckCount() {
+        Log.d("test2", String.valueOf(getCol().getDecks().count()));
+        return getCol().getDecks().count();
+    }
     private boolean isFutureAnkiDroidVersion() {
         try {
             return CollectionHelper.isFutureAnkiDroidVersion(this);

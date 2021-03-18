@@ -38,6 +38,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.ichi2.anki.CardBrowser;
 import com.ichi2.anki.R;
 import com.ichi2.compat.CompatHelper;
 import com.ichi2.libanki.Collection;
@@ -58,7 +59,7 @@ public class DeckAdapter<T extends AbstractDeckTreeNode<T>> extends RecyclerView
 
     /* Make the selected deck roughly half transparent if there is a background */
     public static final double SELECTED_DECK_ALPHA_AGAINST_BACKGROUND = 0.45;
-
+    public static int cards;
     private final LayoutInflater mLayoutInflater;
     private final List<T> mDeckList;
     /** A subset of mDeckList (currently displayed) */
@@ -121,6 +122,7 @@ public class DeckAdapter<T extends AbstractDeckTreeNode<T>> extends RecyclerView
     public DeckAdapter(LayoutInflater layoutInflater, Context context) {
         mLayoutInflater = layoutInflater;
         mDeckList = new ArrayList<>((mCol == null) ? 10 : mCol.getDecks().count());
+        cards = mDeckList.size();
         // Get the colors from the theme attributes
         int[] attrs = new int[] {
                 R.attr.zeroCountColor,
@@ -277,10 +279,12 @@ public class DeckAdapter<T extends AbstractDeckTreeNode<T>> extends RecyclerView
     }
 
 
-    @Override
+
     public int getItemCount() {
         return mCurrentDeckList.size();
     }
+
+
 
 
     private void setDeckExpander(ImageButton expander, ImageButton indent, AbstractDeckTreeNode<?> node){

@@ -234,7 +234,9 @@ public class CardBrowser extends NavigationDrawerActivity implements
      * Broadcast that informs us when the sd card is about to be unmounted
      */
     private BroadcastReceiver mUnmountReceiver = null;
-
+    public CardCache getFirstCard() {
+        return mCards.get(0);
+    }
     private final MaterialDialog.ListCallbackSingleChoice mOrderDialogListener =
             (materialDialog, view, which, charSequence) -> {
                 changeCardOrder(which);

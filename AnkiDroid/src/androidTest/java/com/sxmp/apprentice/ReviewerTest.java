@@ -15,10 +15,13 @@ import androidx.test.rule.GrantPermissionRule;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.*;
 
 public class ReviewerTest {
@@ -37,8 +40,25 @@ public class ReviewerTest {
     }
 
     @Test
-    public void test_isShowAnswerButtonDisplayed() {
-        // checking if the anki web view stats fragments are displayed (should just be 1)
-        onView(withId(R.id.flip_card)).check(matches(isDisplayed()));
+    public void test_isFlipCardButtonNotDisplayedAfterClick() {
+        // checking if the flip card button is displayed
+        onView(withId(R.id.flip_card)).check(matches(isDisplayed()))
+                // click flip card button
+                .perform(click())
+                // flip card button should not be displayed after clicked
+                .check(matches(not((isDisplayed()))));
+    }
+    @Test
+    public void test_isFlagButtonDisplayingFlags() {
+        // array of flags with flag names
+        String flags[] = {"Red flag","Blue flag", "Green flag", "Orange flag", "No flag"};
+        // find action flag icon and click
+        onView(withId(R.id.action_flag)).check(matches(isDisplayed()))
+                // after clicking flag icon, list of flag names should display
+                .perform(click());
+        // loop through flag names to check if they are visible
+        for (int i =0;i<flags.length;i++) {
+            onView(withText(flags[i])).check(matches(isDisplayed()));
+        }
     }
 }
