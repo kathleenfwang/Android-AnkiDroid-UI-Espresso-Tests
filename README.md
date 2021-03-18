@@ -34,7 +34,7 @@ This test case is for the `DeckPicker` activity. The following tests are include
   - `isAddButtonClickableAfterMenuClick()`
     - Test if the "+" button is clickable and a menu with "add" option is displayed <br />
  
-I wanted to dynamically make tests based on if there were decks present and it should display the correct text, i.e. "Collection is empty" if there are no decks. I also wanted to test if the decks were clickable and the "Show Answer" button should not display after it is clicked. It was challenging getting the data from the DeckPicker class, I made a new getDeckCount() function and called it with the activityRule in the test function to obtain the current deck count. <br />
+I wanted to dynamically make tests based on if there were decks present and it should display the correct text, i.e. "Collection is empty" if there are no decks. I also wanted to test if the decks were clickable and the "Show Answer" button should not display after it is clicked. It was challenging getting the data from the DeckPicker class; I made a new getDeckCount() function and called it with the activityRule in the test function to obtain the current deck count. <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573636-23172500-8768-11eb-9d4d-23a608fe1884.png)
 
 ### Reviewer Test: 
@@ -55,7 +55,7 @@ This test case is for the `CardBrowser` activity. The following tests are includ
   - `isSpinnerDisplayingQuestion()`
     - check if the spinner is displaying the "Question" tab and the spinner text is set to "Question" after it's clicked <br /> 
     
-I wanted to check if the spinner was displaying the text correctly and I wanted to make sure the "search" input field was focused after the search button was clicked. It was challenging using the spinner tests and having to use onData instead of onView. <br /> 
+I wanted to check if the spinner was displaying the text correctly and I wanted to make sure the "search" input field was focused after the search button was clicked. It was challenging using the spinner tests and having to use onData instead of onView. It was also challnging finding the card name to make a search test.<br /> 
 ![image](https://user-images.githubusercontent.com/33078129/111573661-2e6a5080-8768-11eb-9719-09b20166c3e9.png)
  
 ### Preferences Test:
