@@ -16,16 +16,14 @@ Tests for the Onramp Android QE available [here](https://github.com/onramp-io/on
   - `doesNotExist()` - MyAccount
 ## Test coverage for at least five different Views: 
 
-### Card Browser Test: 
-This test case is for the `CardBrowser` activity. The following tests are included: 
-  - `isSearchBoxFocused()`
-    - After user clicks the search button, the search edit text field should be focused 
-    - uses `hasFocus()`, `typeTextIntoFocusedView()`, `hasFocus()`
-  - `isSpinnerDisplayingQuestion()`
-    - check if the spinner is displaying the "Question" tab and the spinner text is set to "Question" after it's clicked <br /> 
+### My Account Test:
+This test case is for the `MyAccount` activity. The following tests are included: 
+  - `loginButtonDoesNotRedirectWhenNoUser()`
+    - uses `clearText()`, `doesNotExist()`
+    - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br /> 
     
-I wanted to check if the spinner was displaying the text correctly and I wanted to make sure the "search" input field was focused after the search button was clicked. <br /> 
-![image](https://user-images.githubusercontent.com/33078129/111573661-2e6a5080-8768-11eb-9719-09b20166c3e9.png)
+I wanted to make sure the log in flow would not advance if the username and password fields were blank, and should display an error message. <br />
+![image](https://user-images.githubusercontent.com/33078129/111573555-fe22b200-8767-11eb-9db6-df3788b7382f.png)
 
 ### Deck Picker Test: 
 This test case is for the `DeckPicker` activity. The following tests are included: 
@@ -39,14 +37,26 @@ This test case is for the `DeckPicker` activity. The following tests are include
 I wanted to dynamically make tests based on if there were decks present and it should display the correct text, i.e. "Collection is empty" if there are no decks. I also wanted to test if the decks were clickable and the "Show Answer" button should not display after it is clicked.  <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573636-23172500-8768-11eb-9d4d-23a608fe1884.png)
 
-### My Account Test:
-This test case is for the `MyAccount` activity. The following tests are included: 
-  - `loginButtonDoesNotRedirectWhenNoUser()`
-    - uses `clearText()`, `doesNotExist()`
-    - Clears the username and password text fields, and after pressing the "Log in" button, the "Invalid email address or password" text and the "Log in" button should be displayed <br /> 
+### Reviewer Test: 
+This test case is for the `Reviewer` activity. The following tests are included: 
+  - `isFlipCardButtonNotDisplayedAfterClick()`
+   - After clicking the card, the "Flip Card" button should no longer be displayed 
+  - `isFlagButtonDisplayingFlags()`
+    - The flag button should display options for following flags: "Red flag", "Orange flag", "Green flag", etc <br />
     
-I wanted to make sure the log in flow would not advance if the username and password fields were blank, and should display an error message. <br />
-![image](https://user-images.githubusercontent.com/33078129/111573555-fe22b200-8767-11eb-9db6-df3788b7382f.png)
+I wanted to make a loop to make sure all of the correct flag names were displayed correctly. <br />
+![image](https://user-images.githubusercontent.com/33078129/111573865-9456d800-8768-11eb-8873-8c09614bfa4e.png)
+
+### Card Browser Test: 
+This test case is for the `CardBrowser` activity. The following tests are included: 
+  - `isSearchBoxFocused()`
+    - After user clicks the search button, the search edit text field should be focused 
+    - uses `hasFocus()`, `typeTextIntoFocusedView()`, `hasFocus()`
+  - `isSpinnerDisplayingQuestion()`
+    - check if the spinner is displaying the "Question" tab and the spinner text is set to "Question" after it's clicked <br /> 
+    
+I wanted to check if the spinner was displaying the text correctly and I wanted to make sure the "search" input field was focused after the search button was clicked. <br /> 
+![image](https://user-images.githubusercontent.com/33078129/111573661-2e6a5080-8768-11eb-9719-09b20166c3e9.png)
  
 ### Preferences Test:
 This test case is for the `Preferences` activity. The following tests are included: 
@@ -60,13 +70,5 @@ This test case is for the `Preferences` activity. The following tests are includ
 I wanted to make sure the correct theme/font views would display after clicking.  <br /> 
 ![image](https://user-images.githubusercontent.com/33078129/111573682-388c4f00-8768-11eb-9448-53fadfe9c2cf.png)
 
-### Reviewer Test: 
-This test case is for the `Reviewer` activity. The following tests are included: 
-  - `isFlipCardButtonNotDisplayedAfterClick()`
-   - After clicking the card, the "Flip Card" button should no longer be displayed 
-  - `isFlagButtonDisplayingFlags()`
-    - The flag button should display options for following flags: "Red flag", "Orange flag", "Green flag", etc <br />
-    
-I wanted to make a loop to make sure all of the correct flag names were displayed correctly. <br />
-![image](https://user-images.githubusercontent.com/33078129/111573865-9456d800-8768-11eb-8873-8c09614bfa4e.png)
+
 
