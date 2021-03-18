@@ -2,22 +2,22 @@
 # Test Descriptions: 
 
 ## Use of at least four different ViewMatchers
-  - isDisplayed()
-  - isClickable()
-  - hasFocus()
-  - withSpinnerText()
+  - `isDisplayed()`
+  - `isClickable()`
+  - `hasFocus()`
+  - `withSpinnerText()`
 ## Use of at least three different ViewActions
-  - clearText()
-  - click()
-  - typeTextIntoFocusedView()
-  - pressKey()
+  - `clearText()`
+  - `click()`
+  - `typeTextIntoFocusedView()`
+  - `pressKey()`
 ## Use of at least two different ViewAssertions
-  - matches()
-  - doesNotExist()
+  - `matches()`
+  - `doesNotExist()`
 ## Test coverage for at least five different Views: 
 
 ### Card Browser Test: 
-This test case is for the "Card Browswer" activity. The following tests are included: 
+This test case is for the `CardBrowswer` activity. The following tests are included: 
   - `isSearchBoxFocused()`
     - After user clicks the search button, the search edit text field should be focused 
   - `isSpinnerDisplayingQuestion()`
@@ -25,6 +25,7 @@ This test case is for the "Card Browswer" activity. The following tests are incl
 ![image](https://user-images.githubusercontent.com/33078129/111573661-2e6a5080-8768-11eb-9719-09b20166c3e9.png)
 
 ### Deck Picker Test: 
+This test case is for the `DeckPicker` activity. The following tests are included: 
   - `isTextCorrectWhenCardsInDeck()`
     - If there is cards in deck, should not display "Collection is empty"
   - `isCardClickableAndShowAnswerButtonDisplays()`
@@ -33,12 +34,14 @@ This test case is for the "Card Browswer" activity. The following tests are incl
     - Test if the "+" button is clickable and a menu with "add" option is displayed <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573636-23172500-8768-11eb-9d4d-23a608fe1884.png)
 
-### My Account Test: 
+### My Account Test:
+This test case is for the `MyAccount` activity. The following tests are included: 
   - `loginButtonDoesNotRedirectWhenNoUser()`
     - Clears the username and password text fields, and after pressing the "Log in" button, the page should remain on the Login Page, so the "Log in" button should still display <br />
 ![image](https://user-images.githubusercontent.com/33078129/111573555-fe22b200-8767-11eb-9db6-df3788b7382f.png)
  
 ### Preferences Test:
+This test case is for the `Preferences` activity. The following tests are included: 
   - `doesGeneralSettingsOpenNewPage()`
     - Clicking the "General Settings" option should redirect to settings page 
   - `doesAppearanceThemeOpenOptions()`
@@ -48,6 +51,7 @@ This test case is for the "Card Browswer" activity. The following tests are incl
 ![image](https://user-images.githubusercontent.com/33078129/111573682-388c4f00-8768-11eb-9448-53fadfe9c2cf.png)
 
 ### Reviewer Test: 
+This test case is for the `Reviewer` activity. The following tests are included: 
   - `isFlipCardButtonNotDisplayedAfterClick()`
    - After clicking the card, the "Flip Card" button should no longer be displayed 
   - `isFlagButtonDisplayingFlags()`
