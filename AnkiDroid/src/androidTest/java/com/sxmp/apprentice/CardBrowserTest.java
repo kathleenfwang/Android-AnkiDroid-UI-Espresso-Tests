@@ -51,13 +51,18 @@ public class CardBrowserTest {
     }
 
     @Test
-    public void test_isSearchBox() {
+    public void test_isSearchBoxFocusedAndDisplaysResults() {
         // check search button is displayed
         onView(withId(R.id.action_search)).check(matches(isDisplayed()))
                 // click search button
                 .perform(click());
         // check if search text is now focused
-    onView(withId(R.id.search_src_text)).check(matches(hasFocus())).perform(typeTextIntoFocusedView("Test2")).perform(pressKey(KeyEvent.KEYCODE_ENTER));
+    onView(withId(R.id.search_src_text)).check(matches(hasFocus()))
+            // type name of card "Test2" into search box
+            .perform(typeTextIntoFocusedView("Test2"))
+            // press "enter" to submit search
+            .perform(pressKey(KeyEvent.KEYCODE_ENTER));
+    // snackbar with text "__ cards is shown" should be displayed
     onView(withId(R.id.snackbar_text)).check(matches(isDisplayed()));
     }
     @Test
