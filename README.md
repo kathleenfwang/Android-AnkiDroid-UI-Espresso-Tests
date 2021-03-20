@@ -41,7 +41,7 @@ I wanted to dynamically make tests based on if there were decks present and it s
 ### Reviewer Test: 
 This test case is for the `Reviewer` activity. The following tests are included: 
   - `isFlipCardButtonNotDisplayedAfterClick()`
-   - After clicking the card, the "Flip Card" button should no longer be displayed 
+   - After clicking the card, the "Show Answer" button should no longer be displayed 
   - `isFlagButtonDisplayingFlags()`
     - The flag button should display options for following flags: "Red flag", "Orange flag", "Green flag", etc <br />
     
@@ -72,5 +72,6 @@ This test case is for the `Preferences` activity. The following tests are includ
 I wanted to make sure the correct theme/font views would display after clicking.  <br /> 
 ![image](https://user-images.githubusercontent.com/33078129/111573682-388c4f00-8768-11eb-9448-53fadfe9c2cf.png)
 
-
+## Reflections:
+My tests first started out very simply, just checking if certain features were being displayed correctly with little logic, such as using onView(withId(R.id.someID).check(matches(isDisplayed()). Throughout my tests I gained more and more confidence and started experimenting with different featues such as spinners which used onData and required more specific syntax. I also began to build up tests for features that weren't initially displayed on the view until the user clicked on a button or inputs text. An important lesson I reinforced is that it is okay to start a small test and make sure to test all possible assumptions before moving onto a more complex test. 
 
