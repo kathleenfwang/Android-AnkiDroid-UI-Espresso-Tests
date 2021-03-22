@@ -55,12 +55,20 @@ public class DeckPickerTest {
     }
     @Test
     public void test_isCardClickableAndShowAnswerButtonDisplays() {
-        //select the deck card and perform click
-       onView(withId(R.id.DeckPickerHoriz)).perform(click());
-       // show answer button should then be displayed
-        onView(withId(R.id.flip_card))
-                .check(matches(withText(containsString("SHOW ANSWER"))));
-
+        int cards = activityRule.getActivity().getDeckCount();
+        boolean cardsInDeck = cards > 0;
+        // deck card will only appear if there are cards in deck
+        if (cardsInDeck) {
+            //select the deck card and perform click
+            onView(withId(R.id.DeckPickerHoriz)).perform(click());
+            // show answer button should then be displayed
+            onView(withId(R.id.flip_card))
+                    .check(matches(withText(containsString("SHOW ANSWER"))));
+        }
+        // otherwise if there are no cards in deck, the deck card should not be displayed
+        else {
+            onView(withId(R.id.DeckPickerHoriz)).check(matches(not(isDisplayed())));
+        }
     }
 
     @Test
