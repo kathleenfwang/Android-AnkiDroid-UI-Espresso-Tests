@@ -54,7 +54,7 @@ public class DeckPickerTest {
         }
     }
     @Test
-    public void test_isCardClickableAndShowAnswerButtonDisplays() {
+    public void test_isCardClickableAndShowAnswerDisplays() {
         int cards = activityRule.getActivity().getDeckCount();
         boolean cardsInDeck = cards > 0;
         // deck card will only appear if there are cards in deck
