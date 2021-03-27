@@ -1,20 +1,20 @@
 
 # Test Descriptions for AnkiDroid: 
 
-## Use of at least four different ViewMatchers
+## 4 different `ViewMatchers`:
   - `isDisplayed()` - all 
   - `isClickable()` - DeckPicker
   - `hasFocus()` - CardBrowser
   - `withSpinnerText()`- CardBrowser
-## Use of at least three different ViewActions
+## 3 different `ViewActions`:
   - `clearText()` - MyAccount 
   - `click()` - MyAccount
   - `typeTextIntoFocusedView()` - CardBrowser
   - `pressKey()`- CardBrowser
-## Use of at least two different ViewAssertions
+## 2 different `ViewAssertions`
   - `matches()` - all 
   - `doesNotExist()` - MyAccount
-## Test coverage for at least five different Views: 
+## 5 different `Views`: 
 
 ### My Account Test:
 This test case is for the `MyAccount` activity. The following tests are included: 
