@@ -1,5 +1,5 @@
 
-# Test Descriptions: 
+# Test Descriptions for AnkiDroid: 
 
 ## Use of at least four different ViewMatchers
   - `isDisplayed()` - all 
